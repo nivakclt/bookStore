@@ -2,3 +2,9 @@
 *{
    font-family: "Bodoni Moda", serif;
 }
+#glass{
+    background: radial-gradient(ellipse 130% 90% at 50% 0%, rgba(10, 12, 20, 0.630) 0%, rgba(10, 12, 20, 0.550) 45%, rgba(10, 12, 20, 0.500) 100%);
+     backdrop-filter: blur(60px) saturate(140%);
+     -webkit-backdrop-filter: blur(60px) saturate(140%);
+  color: #ffffff;
+}

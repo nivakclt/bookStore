@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
-    <div className='w-full'>
-<div className='p-4 flex flex-col md:flex-row items-center justify-between gap-4'>            <img src='/bookStore.png' alt='logo' className='w-[90px] h-[90px] rounded-full'/>
-            <h1 className='text-2xl font-bold'>BOOKSTORE</h1>
+    <div id='glass' className='w-full'>
+<div className='p-4 flex flex-col md:flex-row items-center justify-between gap-4'>
+  <img src='/bookStore.png' alt='logo' className='w-[90px] h-[90px] rounded-full'/>
+            <h1 className='text-2xl font-bold' id='metallic-text'
+            >BOOKSTORE</h1>
             <div className='flex items-center gap-2'>
                 <FaInstagram/>
                 <FaFacebook/>
