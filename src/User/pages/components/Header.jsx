@@ -22,6 +22,8 @@ function Header() {
     </div>
 <div className='w-full bg-gray-900 py-3.5 flex flex-col md:flex-row justify-center items-center text-white gap-4'>      <Link to={'/'}>Home</Link>
       <Link to={'/about'}>About</Link>
+            <Link to={'/books'}>Books</Link>
+
       <Link to={'/contact'}>Contact</Link>
     </div>
     </>
