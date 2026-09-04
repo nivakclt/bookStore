@@ -11,16 +11,22 @@ function Header() {
 
   return (
     <>
-   <div id='glass' className='w-full '>
-<div className='p-4 flex flex-col md:flex-row items-center justify-between gap-4'>
-  <img src='/bookStore.png' alt='logo' className='w-[90px] h-[90px] rounded-full'/>
-            <h1 className='text-2xl font-bold' id='metallic-text'
-            >BOOKSTORE</h1>
+<div className='w-full'>
+<div className='px-2 py-2 flex flex-col md:flex-row items-center justify-between gap-4'>
+  <img src='/logo.png' alt='logo' className='w-[90px] h-[90px] rounded-full'/>
+  <div className='flex flex-col items-center'>
+    <h1 className='text-2xl font-bold' id='metallic-text'>
+    BOOKSTORE</h1>
+      <p className='text-xs text-gray-500'>
+    Discover • Read • Grow
+  </p>
+ </div>
+
             <div className='flex items-center gap-2'>
-                <FaInstagram/>
-                <FaFacebook/>
-                <FaTwitter/>
-                <Link to={'/auth'} className=' flex items-center px-1 py-2 rounded-lg border-2 hover:bg-blue-400 hover:text-white'>
+                <FaInstagram className='cursor-pointer hover:scale-125 transition-all duration-300' />
+<FaFacebook className='cursor-pointer hover:scale-125 transition-all duration-300' />
+<FaTwitter className='cursor-pointer hover:scale-125 transition-all duration-300' />
+                <Link to={'/auth'} className=' flex items-center px-1 py-2 rounded-lg border-2 hover:bg-black hover:text-white'>
                 <FaUser/>{' '}
                 Login
                 </Link>
@@ -40,8 +46,8 @@ function Header() {
               </button>
               {
                 dropdown &&
-                <div className='absolute rounded-sm border-2 bg-white text-black p-2'>
-                  <Link to={'/profile'} className=' py-1'>Profile</Link>
+<div className='absolute  right-0 mt-2 bg-white shadow-xl rounded-lg w-40 p-2 transition-all duration-300'>
+  <Link to={'/profile'} className=' py-1'>Profile</Link>
                   <p className='text-red-800 py-1'>Logout</p>
                 </div>
               }
@@ -49,12 +55,12 @@ function Header() {
             </div>
         </div>
     </div>
-<div className='w-full bg-gray-900 py-3.5 flex flex-col md:flex-row justify-center items-center text-white gap-4'>     
- <Link to={'/'}>Home</Link>
-      <Link to={'/about'}>About</Link>
-            <Link to={'/books'}>Books</Link>
+<div className='w-full bg-black py-3.5 flex flex-col md:flex-row justify-center items-center text-white gap-4'>     
+ <Link to={'/'} className='hover:text-red-100 transition-all duration-300'>Home</Link>
+      <Link to={'/about'} className='hover:text-red-100 transition-all duration-300'>About</Link>
+            <Link to={'/books'}className='hover:text-red-100 transition-all duration-300'>Books</Link>
 
-      <Link to={'/contact'}>Contact</Link>
+      <Link to={'/contact'}className='hover:text-red-100 transition-all duration-300'>Contact</Link>
     </div>
     </>
   )

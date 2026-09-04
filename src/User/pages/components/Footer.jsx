@@ -25,7 +25,7 @@ function Footer() {
             placeholder="Enter your email"
             className="bg-white text-black"
           />
-          <button className=" bg-amber-950 py-2 px-1 border-2 border-grey-600">
+          <button className=" bg-gray-950 py-2 px-1 border-2 border-grey-600">
             <FaArrowRight />
           </button>
         </div>

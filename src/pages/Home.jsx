@@ -14,79 +14,143 @@ function Home() {
 
   return (
     <>
-      {
-      loadStatus ? (
+      {loadStatus ? (
         <Preloader />
       ) : (
-
         <>
-         <Header />
-            <div>
-              {/* hero section */}
-              <section className='w-full'>
-                <div className="h-[80vh] bg-[url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlicmFyeXxlbnwwfHwwfHx8MA%3D%3D')]
-                bg-no-repeat bg-cover bg-fixed bg-center">
-                  <div className='text-white bg-[rgba(0,0,0,0.3)] h-full flex flex-col items-center justify-center gap-4'>
-                    <h1 className='text-5xl'>Wonderful Gifts</h1>
-                    <h4 className=' text-lg md:text-3xl '>Give your Family and Friends a book</h4>
-                    <div className='relative'>
-                      <input type='text' placeholder='Search for books' className=' bg-white text-gray-700 rounded-3xl'/>
-<FaSearch className='absolute text-black right-4 top-1/2 -translate-y-1/2'/>                    </div>
-                  </div>
-                </div>
-              </section>
-              {/* new arrivals */}
-              <section className='w-full my-3 '>
-                <h1 className='text-3xl text-center mb-4'>New Arrivals</h1>
-                <h4 className='text-lg text-center mb-4'>Check out our latest additions!</h4>
-                <div className='flex flex-wrap gap-4 justify-around'>
-                  {/* card */}
-                  <div clasName="w-[16rem] shadow-2xl">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA539xYtxbtfoXg1yG4tsKK04wyVfkZfCY6LQHQeYFRV0oc6u_E1GZKaV5&s=10"
-                    alt="Harry Potter" className='h-75 w-full'/>
-                    <h1 className='text-center my-2'>Harry Potter</h1>
-                    <h1 className='bg-blue-400 text-white text-center'>$19.99</h1>
-                  </div>
-                   </div>
-                  <div className='text-center mt-4'>
-                    <button className='bg-orange-400 text-white py-2 px-3'>Explore More...
-                    </button>
-                  </div>
-                </section>
-                {/* authors */}
-                <section className='w-full my-3'>
-                  <div className='grid sm:grid-cols-1 md:grid-cols-2'>
-                  <div>
-                    <h1 className='text-center text-xl'>FEATURED AUTHORS</h1>
-                    <h1 className="text-center text-2xl">CAPTIVATE WITH EVERY WORDS</h1>
-                    <p className="text-justify">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, esse mollitia voluptatum ducimus quae ex? Aperiam expedita reiciendis maxime magni eius illum est possimus, animi dolore eligendi, dolor, hic necessitatibus.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatem accusantium minus dolore libero eum assumenda pariatur quo ipsum aliquid. Veniam, minus debitis. Quasi unde expedita consequatur illum non porro.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus mollitia, ullam accusamus repudiandae nihil ea soluta perferendis in veritatis repellat praesentium vitae, fuga maiores porro architecto odit quis consequatur
-                    </p>
-                  </div>
-                  <div className="px-3 items-center">
-                    <img src='https://media.istockphoto.com/id/1289220781/photo/portrait-of-happy-smiling-woman-at-desk.jpg?s=612x612&w=0&k=20&c=FtC05luuxRpiKRj5F84e2CiPf0h_ZuX6o7o5JwlNaJM=' className="w-full"/>
-                  </div>
-                  </div>
-                </section>
-                {/* testimony */}
-                <section className="w-full px-5">
-                  <h1 className="text-center text-xl">TESTIMONALS</h1>
-                  <h1 className="text-center my-2 text-3xl">SEE WHAT OTHER PEOPLE ARE SAYING</h1>
-                  <div className="flex flex-col items-center mb-3">
-                             <img src='https://media.istockphoto.com/id/1954638030/photo/beautiful-woman-working-in-a-creative-studio.jpg?s=612x612&w=0&k=20&c=wt8T6hbPbd1hyYarORw92TmFASRjYuekpyP1grXFCR4=' alt="author image" className="w-75 h-75 rounded-full "/>
-                    </div>
-                    <div>
-                                      <h1>John Doe</h1>
-                                      <p className="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis excepturi dicta accusantium impedit ducimus cupiditate aliquid explicabo sunt amet repellat, tempora, cumque ab dolorum debitis sapiente. Similique sed excepturi doloremque!
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur molestiae nulla nesciunt quaerat quisquam eligendi illo animi non eos iure libero, repellat ipsum architecto voluptate et cum expedita delectus. Adipisci.
-                                      </p>
+          <Header />
+          <div>
+{/* Hero Section */}
+<section className="w-full">
+  <div className="relative h-screen">
 
-                  </div>
-                </section>
-            </div>
-            <Footer />
+    {/* Background Image */}
+    <div
+      className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fm=jpg&q=60&w=3000&auto=format&fit=crop')]
+      bg-cover bg-center"
+    ></div>
+
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black/50"></div>
+
+    {/* Content */}
+    <div className="relative z-10 h-full flex flex-col items-center justify-center text-white px-6">
+
+<h1 className="text-6xl md:text-8xl font-extralight text-center tracking-wide">
+        Wonderful Gifts
+      </h1>
+
+      <p className="mt-6 text-gray-300 text-center max-w-md">
+        Give your family and friends a book.
+      </p>
+
+      <div className="relative mt-10">
+        <input
+          type="text"
+          placeholder="Search books..."
+          className="w-[300px] md:w-[450px] bg-white/95 text-black rounded-full px-6 py-3 outline-none"
+        />
+
+        <FaSearch className="absolute right-5 top-1/2 -translate-y-1/2 text-gray-500" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+            {/* new arrivals */}
+
+            <section className="w-full bg-black text-white py-16">
+              <h1 className="text-4xl font-light text-center mb-3">
+                New Arrivals
+              </h1>
+
+              <p className="text-center text-gray-400 mb-12">
+                Discover our latest collection
+              </p>
+
+              <div className="flex justify-center">
+                <div className="w-64">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA539xYtxbtfoXg1yG4tsKK04wyVfkZfCY6LQHQeYFRV0oc6u_E1GZKaV5&s=10"
+                    alt="Harry Potter"
+                    className="w-full h-80 object-cover rounded-md transition duration-300 hover:scale-105"
+                  />
+
+                  <h2 className="mt-4 text-center text-lg">Harry Potter</h2>
+
+                  <p className="text-center text-gray-400 mt-1">$19.99</p>
+                </div>
+              </div>
+
+              <div className="text-center mt-12">
+                <button className="border border-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition">
+                  Explore More
+                </button>
+              </div>
+            </section>
+            {/* authors */}
+            <section className="w-full py-16 px-6">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div>
+                  <h1 className="text-sm text-gray-500">FEATURED AUTHORS</h1>
+                  <h1 className="text-4xl font-light my-4">
+                    CAPTIVATE WITH EVERY WORDS
+                  </h1>
+                  <p className="text-justify text-gray-600 leading-5">
+                    Discover stories that inspire, educate, and entertain.
+                    Explore works from talented authors and immerse yourself in
+                    unforgettable journeys.Every great book begins with a single
+                    page. Discover captivating stories, insightful perspectives,
+                    and unforgettable journeys crafted by talented authors from
+                    around the world. Find your next favorite read and let every
+                    chapter inspire you.
+                  </p>
+                </div>
+                <div className="px-3 items-center">
+                  <img
+                    src="https://media.istockphoto.com/id/1289220781/photo/portrait-of-happy-smiling-woman-at-desk.jpg?s=612x612&w=0&k=20&c=FtC05luuxRpiKRj5F84e2CiPf0h_ZuX6o7o5JwlNaJM="
+                    className="w-full rounded-lg transition-all duration-300 hover:scale-105"
+                  />
+                </div>
+              </div>
+            </section>
+            {/* testimony */}
+            <section className="bg-black text-white max-w-5xl mx-auto rounded-3xl py-12 px-8 my-16">
+              <h1 className="text-center text-sm tracking-widest text-gray-400">
+                TESTIMONIALS
+              </h1>
+
+              <h1 className="text-center text-3xl font-light my-3">
+                What Our Readers Say
+              </h1>
+
+              <div className="flex justify-center my-8">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5DKe2Zhg37Z7ngA7dphW51BLQZylYgLje4eVrMMTWZqHS3nx83nGkKdWf&s=10"
+                  alt="reader"
+                  className="w-32 h-32 rounded-full object-cover"
+                />
+              </div>
+
+              <h2 className="text-center text-xl font-semibold mb-4">
+                John Doe
+              </h2>
+
+              <p className="text-center text-gray-300 leading-8 max-w-3xl mx-auto">
+                "I absolutely love this bookstore. The collection is diverse,
+                the recommendations are excellent, and every purchase feels
+                special. I've discovered some of my favorite books here, and the
+                service has always been outstanding. It's my go-to place
+                whenever I'm looking for a great read. Reading has always been
+                my passion, and this bookstore makes it even more enjoyable. The
+                selection is outstanding, the prices are reasonable, and the
+                atmosphere inspires me to explore new genres and authors."
+              </p>
+            </section>
+          </div>
+          <Footer />
         </>
       )}
     </>
