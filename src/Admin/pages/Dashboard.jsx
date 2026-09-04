@@ -1,7 +1,12 @@
-
+import AdminHeader from "./components/AdminHeader"
+import Footer from "../../User/pages/components/Footer"
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <>
+    <AdminHeader/>
+    {/* Dashboard */}
+    <Footer/>
+    </>
   )
 }
 

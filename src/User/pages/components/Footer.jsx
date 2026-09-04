@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 function Footer() {
   return (
-    <div className="w-full bg-gray-800 text-white grid grid-cols-1 md:grid-cols-3 gap-4 p-8">
+    <div className="w-full bg-black text-white grid grid-cols-1 md:grid-cols-3 gap-4 p-8">
       <div>
         <h4 className="text-md font-bold mb-3">ABOUT US</h4>
         <p className="text-justify">
@@ -23,9 +23,9 @@ function Footer() {
           <input
             type="text"
             placeholder="Enter your email"
-            className="bg-yellow-100 text-gray-600"
+            className="bg-white text-black"
           />
-          <button className="     bg-orange-400 py-2 px-1 border-2 border-grey-600">
+          <button className=" bg-amber-950 py-2 px-1 border-2 border-grey-600">
             <FaArrowRight />
           </button>
         </div>
