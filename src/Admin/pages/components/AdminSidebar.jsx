@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 function AdminSidebar() {
   return (
     <>
-    <div className="bg-gray-300 min-h-[75vh] flex items-center">
+    <div className="bg-gray-300 min-h-[80vh] flex items-center">
     <div className="flex flex-col items-center gap-3 w-full h-full ">
         <img src="https://png.pngtree.com/png-vector/20241115/ourmid/pngtree-user-icon-web-admin-profile-avatar-silver-color-style-vector-png-image_14430725.png"
          width={"65%"} className="rounded-full"/>
