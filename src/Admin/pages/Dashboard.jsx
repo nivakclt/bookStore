@@ -8,7 +8,7 @@ function Dashboard() {
       <AdminHeader />
       {/* Dashboard */}
       <div className="w-full">
-        <div className="w-full h-full grid sm:grid-cols-1 md:grid-cols-12">
+        <div className="w-full grid sm:grid-cols-1 md:grid-cols-12">
           <div className="md:col-span-3">
             <AdminSidebar />
           </div>
